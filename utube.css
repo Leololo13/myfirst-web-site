@@ -1,0 +1,215 @@
+:root {
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  --padding: 12px;
+  --avatar--size: 36px;
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+  --icon-medium: 16px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+}
+ul {
+  list-style-type: none;
+}
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: white;
+}
+header {
+  background: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  padding: var(--padding);
+  color: var(--white-color);
+}
+/* video */
+.video_logo {
+  font-size: var(--font-large);
+}
+.video_logo i {
+  color: var(--red-color);
+}
+.video_icon a {
+  color: var(--white-color);
+}
+.video_icon .fa-search {
+  margin-right: var(--padding);
+}
+.video_main {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background: var(--black-color);
+}
+.video_main video {
+  width: 20%;
+  height: 20%;
+  max-width: 500px;
+}
+body > .info {
+  padding: var(--padding);
+}
+.info .metadata .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+}
+.info .metadata .hashtags li {
+  margin-right: var(--padding);
+}
+.info .metadata .tittleAndButton {
+  display: flex;
+}
+.info .metadata .tittleAndButton .title {
+  font-size: var(--font-medium);
+  margin-right: var(--padding);
+}
+.info .metadata .tittleAndButton .title.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.info .metadata .tittleAndButton .moreBtn.clicked {
+  transform: rotate(180deg);
+  transition: transform 300ms ease-in-out;
+  color: red;
+}
+.info .metadata .tittleAndButton .moreBtn {
+  transition: transform 300ms ease-in-out;
+}
+.info .Views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+/* 액션버튼 like, hate, share, etc */
+.info .actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding);
+}
+
+.info .actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.info .actions button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: var(--icon-medium);
+}
+.info .actions button i.active {
+  color: var(--blue-color);
+}
+
+/* channel info */
+.channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+  padding: var(--padding);
+}
+.channel .metadata {
+  display: flex;
+  align-items: center;
+}
+.channel .metadata img {
+  width: var(--avatar--size);
+  height: var(--avatar--size);
+  border-radius: 50%;
+  margin-right: var(--padding);
+}
+.channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+.channel .metadata .info .name {
+  font-size: var(--font-medium);
+}
+.channel .metadata .info .subcribers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.channel .subscribe {
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+/* Up-next */
+.UpNext {
+  display: flex;
+  flex-direction: column;
+  margin: var(--padding);
+}
+.UpNext > .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+.UpNext .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.UpNext .item .img img {
+  width: 50%;
+}
+.UpNext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+.UpNext .item .info {
+  flex: 1 1 60%;
+}
+.UpNext .item .morebutton {
+  flex: 1 1 5%;
+}
+
+.UpNext .item .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.UpNext .item .info .name,
+.UpNext .item .info .views {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
+.infoupnext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoupnext {
+    flex-direction: row;
+  }
+  .info {
+    flex: 70%;
+  }
+  .UpNext {
+    flex: 30%;
+  }
+}
